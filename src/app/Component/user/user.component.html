@@ -1,0 +1,25 @@
+<p>
+  hello this also works! {{name}}
+</p>
+<ul>
+  <li *ngFor="let hobby of hobbies;let i = index">{{i+1}}: {{hobby}}
+    <button (click)="deleteItem(hobby)">x</button>
+  </li>
+</ul>
+
+<button (click)="onClick()">click me</button>
+
+<div>
+  <form (submit)="add(hobby.value)">
+    <input type="text" #hobby>
+  </form>
+</div>
+<h1>All Posts</h1>
+<div class="row">
+  <div class="col-md-6">
+      <div *ngFor="let post of posts">
+      <h2><b>{{post.title}}</b></h2>
+      <p>{{post.body}}</p>
+  </div>
+</div>
+</div>
